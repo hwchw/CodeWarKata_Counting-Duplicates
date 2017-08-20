@@ -14,19 +14,13 @@ namespace DuplicateCountingHelper
 			var duplicateSymbolCounter = 0;
 			foreach (var symbolChar in characters)
 			{
-				var count = 0;
-				foreach (var targetChar in characters)
-				{
-					if (symbolChar == targetChar)
-					{
-						count++;
-					}
-				}
+				int count = str.Count(f => f == symbolChar);
 				if (count > 1)
 				{
 					duplicateSymbolCounter++;
+					str = str.Replace(symbolChar.ToString(), "");
 				}
-			}
+			}	
 
 			return duplicateSymbolCounter;
 
