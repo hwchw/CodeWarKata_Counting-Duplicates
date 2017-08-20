@@ -9,6 +9,10 @@ namespace DuplicateCountingHelper
     {
 		 public static int DuplicateCount(string str)
 		 {
+			 if (string.IsNullOrEmpty(str))
+			 {
+				 return 0;
+			 }
 			 return -1;
 		 }
     }
