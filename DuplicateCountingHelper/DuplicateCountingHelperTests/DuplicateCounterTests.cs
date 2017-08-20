@@ -14,7 +14,7 @@ namespace DuplicateCountingHelper.Tests
 		public void DuplicateCountTest()
 		{
 			Assert.AreEqual(0, DuplicateCounter.DuplicateCount(""));
-			//Assert.AreEqual(0, DuplicateCounter.DuplicateCount("abcde"));
+			Assert.AreEqual(0, DuplicateCounter.DuplicateCount("abcde"));
 			//Assert.AreEqual(2, DuplicateCounter.DuplicateCount("aabbcde"));
 			//Assert.AreEqual(2, DuplicateCounter.DuplicateCount("aabBcde"), "should ignore case");
 			//Assert.AreEqual(1, DuplicateCounter.DuplicateCount("Indivisibility"));
