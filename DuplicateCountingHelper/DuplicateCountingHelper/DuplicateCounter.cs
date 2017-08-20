@@ -21,3 +21,5 @@ namespace DuplicateCountingHelper
 		}
 	}
 }
+
+//after finish the Kata, the answer:  public static int DuplicateCount(string str) => str.ToLower().GroupBy(v => v).Count(v => v.Count() >= 2);
