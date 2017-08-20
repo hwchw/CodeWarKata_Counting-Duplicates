@@ -7,20 +7,17 @@ namespace DuplicateCountingHelper
 		public static int DuplicateCount(string str)
 		{
 			str = str.ToLower();
-			var characters = str.ToCharArray();
 			var duplicateSymbolCounter = 0;
-			foreach (var symbolChar in characters)
+
+			foreach (var symbolChar in str.ToCharArray())
 			{
-				int count = str.Count(f => f == symbolChar);
-				if (count > 1)
-				{
-					duplicateSymbolCounter++;
-					str = str.Replace(symbolChar.ToString(), "");
-				}
-			}	
+				var sameCharCount = str.Count(f => f == symbolChar);
+				if (sameCharCount <= 1) continue;
+				duplicateSymbolCounter++;
+				str = str.Replace(symbolChar.ToString(), "");
+			}
 
 			return duplicateSymbolCounter;
-
 		}
 	}
 }
