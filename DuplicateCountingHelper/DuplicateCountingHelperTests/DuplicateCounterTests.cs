@@ -21,6 +21,7 @@ namespace DuplicateCountingHelper.Tests
 			Assert.AreEqual(2, DuplicateCounter.DuplicateCount("Indivisibilities"), "characters may not be adjacent");
 			Assert.AreEqual(0, DuplicateCounter.DuplicateCount("1"), "characters may not be adjacent");
 			Assert.AreEqual(1, DuplicateCounter.DuplicateCount("11"), "characters may not be adjacent");
+			Assert.AreEqual(2, DuplicateCounter.DuplicateCount("ABBA"), "characters may not be adjacent");
 		}
 	}
 }
