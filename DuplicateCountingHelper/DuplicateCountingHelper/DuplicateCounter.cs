@@ -6,10 +6,7 @@ namespace DuplicateCountingHelper
 	{
 		public static int DuplicateCount(string str)
 		{
-			if (string.IsNullOrEmpty(str))
-			{
-				return 0;
-			}
+			str = str.ToLower();
 			var characters = str.ToCharArray();
 			var duplicateSymbolCounter = 0;
 			foreach (var symbolChar in characters)
