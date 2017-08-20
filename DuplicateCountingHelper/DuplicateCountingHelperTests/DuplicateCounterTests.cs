@@ -18,7 +18,7 @@ namespace DuplicateCountingHelper.Tests
 			Assert.AreEqual(2, DuplicateCounter.DuplicateCount("aabbcde"));
 			Assert.AreEqual(2, DuplicateCounter.DuplicateCount("aabBcde"), "should ignore case");
 			Assert.AreEqual(1, DuplicateCounter.DuplicateCount("Indivisibility"));
-			//Assert.AreEqual(2, DuplicateCounter.DuplicateCount("Indivisibilities"), "characters may not be adjacent");
+			Assert.AreEqual(2, DuplicateCounter.DuplicateCount("Indivisibilities"), "characters may not be adjacent");
 		}
 	}
 }
