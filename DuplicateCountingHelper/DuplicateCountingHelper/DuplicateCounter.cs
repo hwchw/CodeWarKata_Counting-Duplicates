@@ -1,19 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DuplicateCountingHelper
+﻿namespace DuplicateCountingHelper
 {
-    public class DuplicateCounter
-    {
-		 public static int DuplicateCount(string str)
-		 {
-			 if (string.IsNullOrEmpty(str))
-			 {
-				 return 0;
-			 }
-			 return -1;
-		 }
-    }
+	public class DuplicateCounter
+	{
+		public static int DuplicateCount(string str)
+		{
+			if (string.IsNullOrEmpty(str))
+			{
+				return 0;
+			}
+			var characters = str.ToCharArray();
+			var duplicateSymbolCounter = 0;
+			foreach (var symbolChar in characters)
+			{
+				var count = 0;
+				foreach (var targetChar in characters)
+				{
+					if (symbolChar == targetChar)
+					{
+						count++;
+					}
+				}
+				if (count > 1)
+				{
+					duplicateSymbolCounter++;
+				}
+			}
+
+			return duplicateSymbolCounter;
+		}
+	}
 }
